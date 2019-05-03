@@ -1,0 +1,11 @@
+D:\Users\jleal\Documents\gradebook\src\GradeBook\bin\Debug\netcoreapp2.1\GradeBook.deps.json
+D:\Users\jleal\Documents\gradebook\src\GradeBook\bin\Debug\netcoreapp2.1\GradeBook.runtimeconfig.json
+D:\Users\jleal\Documents\gradebook\src\GradeBook\bin\Debug\netcoreapp2.1\GradeBook.runtimeconfig.dev.json
+D:\Users\jleal\Documents\gradebook\src\GradeBook\bin\Debug\netcoreapp2.1\GradeBook.dll
+D:\Users\jleal\Documents\gradebook\src\GradeBook\bin\Debug\netcoreapp2.1\GradeBook.pdb
+D:\Users\jleal\Documents\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.csprojAssemblyReference.cache
+D:\Users\jleal\Documents\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.csproj.CoreCompileInputs.cache
+D:\Users\jleal\Documents\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.AssemblyInfoInputs.cache
+D:\Users\jleal\Documents\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.AssemblyInfo.cs
+D:\Users\jleal\Documents\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.dll
+D:\Users\jleal\Documents\gradebook\src\GradeBook\obj\Debug\netcoreapp2.1\GradeBook.pdb
