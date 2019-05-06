@@ -4,7 +4,7 @@ namespace GradeBook
 {
     public class Book
     {
-        private string Name;
+        public string Name;
         private List<double> grades;
 
         public Book(string name)
