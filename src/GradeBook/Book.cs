@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace GradeBook
@@ -14,7 +15,10 @@ namespace GradeBook
         }
         public void AddGrade(double grade)
         {
-            this.grades.Add(grade);
+            if(grade>0 && grade<100)
+                this.grades.Add(grade);
+            else
+                throw new ArgumentException($"Invalid {nameof(grade)}");
 
         }
         public Statistics getStatistics()
@@ -25,16 +29,43 @@ namespace GradeBook
             double Sum=0;
             foreach (var grade in grades)
             {
-                if(grade>s.High)
-                s.High=grade;
-
-                if(grade<s.Low)
-                s.Low=grade;
-
+                
+                s.High= System.Math.Max(grade,s.High);
+                s.Low=System.Math.Min(grade,s.Low);
                 Sum+=grade;
             } 
             Sum/=grades.Count;
             s.Average=Sum;
+            
+            switch (s.Average)
+            {
+                
+                case var d when d>=90:
+                s.Grade="A";
+                break;
+
+                case var d when d>=80:
+                s.Grade="B";
+                break;
+
+                case var d when d>=70:
+                s.Grade="C";
+                break;
+
+                case var d when d>=60:
+                s.Grade="D";
+                break;
+
+                case var d when d>=50:
+                s.Grade="E";
+                break;
+
+                default:
+                s.Grade="F";
+                break;
+
+            
+            }
 
 
             return s;
