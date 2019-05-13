@@ -13,10 +13,16 @@ namespace GradeBook
             this.Name=name;
             this.grades=new List<double>();
         }
+        public event GradeAddedDelegate GradeAdded;
         public void AddGrade(double grade)
         {
             if(grade>0 && grade<100)
-                this.grades.Add(grade);
+             {
+                    this.grades.Add(grade);
+                    if(GradeAdded!=null)
+                        GradeAdded(this,new EventArgs());
+
+             }
             else
                 throw new ArgumentException($"Invalid {nameof(grade)}");
 

@@ -2,12 +2,17 @@
 
 namespace GradeBook
 {
+    public delegate void GradeAddedDelegate(object sender,EventArgs args);
+
     class Program
     {
+        
         static void Main(string[] args)
         {
-           Book b=new Book("GOT");
+            Book b=new Book("GOT");
+            b.GradeAdded+=GradeAddedLogger;
             System.Console.WriteLine("Input a Grade: ");
+            
             string input=Console.ReadLine();
             while(input.ToUpper()!="Q")
             {
@@ -17,15 +22,12 @@ namespace GradeBook
                      try
                      {
                         b.AddGrade(d);
-                        System.Console.WriteLine("Grade Added!"); 
                      }
                      catch (System.ArgumentException ex)
                      {
                          System.Console.WriteLine(ex.Message); 
-                        
                      }
-                  
-
+           
                  }   
 
                 System.Console.WriteLine("Input a Grade: ");
@@ -39,6 +41,11 @@ namespace GradeBook
            System.Console.WriteLine($"Grade: {result.Grade}");
 
            Console.ReadLine();
+        }
+    
+        public static void GradeAddedLogger(object sender,EventArgs args)
+        {
+            System.Console.WriteLine("Grade Added!"); 
         }
     }
 }

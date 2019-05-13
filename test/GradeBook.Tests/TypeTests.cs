@@ -5,8 +5,26 @@ using GradeBook;
 
 namespace GradeBook.Tests
 {
+    public delegate string WriteLogDelegate(string message);
     public class TypeTests
     {
+        int count=0;
+        [Fact]
+        public void WriteLogDelegateCanPointToMethod()
+        {
+           WriteLogDelegate Log=ReturnMessage;
+           Log+=ReturnMessage;
+           Log+=ReturnMessage;
+
+           var result=Log("Hello");
+           Assert.Equal(3,count);
+           Assert.Equal("Hello",result);
+        }
+        string ReturnMessage(string message)
+        {
+            count++;
+            return message;   
+        }
 
         [Fact]
         public void ValueTypesTest()
